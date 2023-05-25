@@ -40,7 +40,10 @@
     <div class="sidebar">
         <div id="location">
             <h2>What city are you visiting?</h2>
-            <p>Here is where you'll find local exchange rates.</p>
+            <form>
+                <input type = "text" location = "location" id = "locationInfo"/>
+            </form>
+            <button type="submit" class ="btn" id = "searchBtn">Search</button>
         </div>
         
         <div id="currencyex">
@@ -54,5 +57,6 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assests/js/script.js"></script>
 </body>
