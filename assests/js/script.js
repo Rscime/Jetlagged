@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
       textArea.value = savedText;
     }
   });
+
   saveButtons.forEach(function(button, index) {
     button.addEventListener("click", function() {
       var textBox = textAreas[index];
@@ -59,4 +60,11 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log("Saved text:", savedText);
     });
   });
-})
+});
+
+//clear buttons for forms
+var resetBtn = $('.resetButton');
+var textBox = $('textarea');
+resetBtn.on('click', function(){
+    textBox.val("");
+});
