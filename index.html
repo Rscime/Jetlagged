@@ -110,6 +110,15 @@
     <br>
 
     <div class="sidebar">
+        <div id="location">
+            <!-- Added form for location -->
+            <h2>What city are you visiting?</h2>
+            <form>
+                <input type = "text" location = "location" id = "locationInfo"/>
+            </form>
+            <button type="submit" class ="btn" id = "searchBtn">Search</button>
+        </div>
+        
         <div id="currencyex">
             <h2>CEX Rate</h2>
             <p>Here is where you'll find local exchange rates.</p>
@@ -120,7 +129,9 @@
             <p>Lost? Find yourself here:</p>
         </div>
     </div>
-
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
+  
 </body>
 </html>
