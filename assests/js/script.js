@@ -1,3 +1,4 @@
+feature/clearButtons
 var APIkey = "bdAaYSOFUtzpTl31szeCTwxkqTQkbXkPhqVSXr3O"; 
 
 async function getExchangeRate(fromCurrency, toCurrency) {
@@ -68,3 +69,4 @@ var textBox = $('textarea');
 resetBtn.on('click', function(){
     textBox.val("");
 });
+
