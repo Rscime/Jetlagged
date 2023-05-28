@@ -1,0 +1,62 @@
+body {
+    background: lightgrey;
+}
+
+.wrapper {
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    background: white;
+    text-align: center;
+}
+
+.wrapper header {
+    font-size: 26px;
+    font-weight: Bold;
+}
+
+.wrapper form {
+    margin: 40px 20px 40px 20px;
+}
+
+.wrapper :where(input, select, button) {
+    width:80%;
+}
+.wrapper input {
+    height:25px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15;
+}
+
+.wrapper input:focus {
+    border: 2px solid black;
+}
+
+.wrapper .drop-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 45px 20px 45px;
+
+}
+
+.drop-list .select-box{
+    display: flex;
+    height: 40px;
+    width: 80px;
+}
+
+.select-box select{
+    width: auto;
+}
+
+.wrapper button {
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgb(41, 149, 221); 
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+}
