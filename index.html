@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>jetLagged</title>
@@ -51,7 +51,7 @@
 
             <div id="Day4">
                 <label class="title is-4 my-1" for="freeform-4">
-                   <p class="my-2">Day 4</p>
+                    <p class="my-2">Day 4</p>
                 </label>
                 <textarea class="textarea" placeholder="What's the plan?"></textarea>
                 <button class="button btn saveButton is-primary my-1">Save</button>
@@ -65,71 +65,68 @@
                 <textarea class="textarea" placeholder="What's the plan?"></textarea>
                 <button class="button btn saveButton is-primary my-1">Save</button>
             </div>
-      
-    <div class="sidebar">
-        <div id="location">
-            <!-- Added form for location -->
-            <h2>What city are you visiting?</h2>
-            <form>
-                <input type = "text" location = "location" id = "locationInfo"/>
-            </form>
-            <button type="submit" class ="btn" id = "searchBtn">Search</button>
         </div>
-      
-        <div class="column section container has-text-centered">
-            <div class="sidebar container">
-                <div class="section" id="location">
-                    <!-- Added form for location -->
-                    <h2 class="title is-4">What city are you <span class="has-text-primary">visiting</span>?</h2>
-                    <form>
-                        <input class="my-2" type="text" location="location" id="locationInfo" />
-                    </form>
-                    <button type="submit" class="button btn is-primary" id="searchBtn">Search</button>
-                </div>
+        
+        <div class="column section container">
+                <div class="sidebar">
 
-                <div class="section" id="currencyex">
-                    <h2 class="title is-4">Currency Exchange <span class="has-text-primary">Rate</span></h2>
-                   <div class="wrapper">
-            <h2>Currency Converter</h2>
-            <p>Find Exchange Rates</p>
-            <form action="#">
-                <div class="amount">
-                    <p> Enter Amount:</p>
-                    <input type="text" value="1">
-                </div>
-                <div class="drop-list">
-                    <div class="from">
-                        <p>From:</p>
-                        <div class="select-box">
-                            <select></select>
-                        </div>
-                  </div>
-                  <div class="icon"><i class="fas fa-exchange-alt"></i></div>
-                    <div class="to">
-                        <p>To:</p>
-                        <div class="select-box">
-                            <select></select>
-                        </div>
-                  </div>
-                </div>
-                <div class="exchange-rate">Getting Exchange Rate...</div>
-                <button>Convert Currency</button>
-            </form>
-          
-        </div>
-                </div>
+                    <div class="column section container has-text-centered">
+                        <div class="sidebar container">
+                            <div class="section" id="location">
+                                <!-- Added form for location -->
+                                <h2 class="title is-4">What city are you <span class="has-text-primary">visiting</span>?
+                                </h2>
+                                <form>
+                                    <input class="my-2" type="text" location="location" id="locationInfo" />
+                                </form>
+                                <button type="submit" class="button btn is-primary" id="searchBtn">Search</button>
+                            </div>
 
-                <div class="section" id="map">
-                    <h2 class="title is-4">The Almighty <span class="has-text-primary">Map</span></h2>
-                    <p>Lost? Find yourself here:</p>
+                            <div class="section" id="currencyex">
+                                <h2 class="title is-4">Currency Exchange <span class="has-text-primary">Rate</span></h2>
+                                <div class="wrapper">
+                                    <h2>Currency Converter</h2>
+                                    <p>Find Exchange Rates</p>
+                                    <form action="#">
+                                        <div class="amount">
+                                            <p> Enter Amount:</p>
+                                            <input type="text" value="1">
+                                        </div>
+                                        <div class="drop-list">
+                                            <div class="from">
+                                                <p>From:</p>
+                                                <div class="select-box">
+                                                    <select></select>
+                                                </div>
+                                            </div>
+                                            <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                                            <div class="to">
+                                                <p>To:</p>
+                                                <div class="select-box">
+                                                    <select></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="exchange-rate">Getting Exchange Rate...</div>
+                                        <button>Convert Currency</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="section" id="map">
+                                <h2 class="title is-4">The Almighty <span class="has-text-primary">Map</span></h2>
+                                <p>Lost? Find yourself here:</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="./assets/js/countries.js"></script>
+            <script src="./assets/js/script.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/countries.js"></script>
-    <script src="./assets/js/script.js"></script>
-  
 </body>
+
 </html>
