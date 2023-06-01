@@ -43,3 +43,57 @@ function getExchangeRate(){
         exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`;
     })
 }
+
+
+//let map;
+
+
+//async function initMap() {
+//    const position = { lat: 54.5260, lng: 15.2551 };
+  //  const { Map } = await google.maps.importLibrary("maps");
+ //  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+//
+ //   map = new Map(document.getElementById("map"), {
+ //       zoom: 4,
+ //       center: position,
+  //      mapId: "Jetlagged_MAP_ID",
+   //   });
+
+ 
+  //    const marker = new AdvancedMarkerElement({
+ //       map: map,
+ //       position: position,
+  //      title: "Europe",
+ //     });
+
+  
+ //    }
+    
+ //   initMap();
+
+
+ const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+ let labelIndex = 0;
+
+ function initMap() {
+    const Europe = { lat: 54.5260, lng: 15.2551 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: Europe,
+    });
+
+    google.maps.event.addListener(map, "click", (event) => {
+        addMarker(event.latLng, map);
+      });
+      addMarker(Europe, map);
+    }
+    function addMarker(location, map) {
+        new google.maps.Marker({
+            position: location,
+            label: labels[labelIndex++ % labels.length],
+            map: map,
+          });
+        }
+        
+        window.initMap = initMap;
+        
