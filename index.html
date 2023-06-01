@@ -73,55 +73,77 @@
     
         
         <div class="column section container">
-                <div class="sidebar">
+          
+            <div class="sidebar">
 
-                    <div class="column section container has-text-centered">
-                        <div class="sidebar container">
-                            <div class="section" id="location">
-                                <!-- Added form for location -->
-                                <h2 class="title is-4">What city are you <span class="has-text-primary">visiting</span>?
-                                </h2>
-                                <form>
-                                    <input class="my-2" type="text" location="location" id="locationInfo" />
+                <div class="column section container has-text-centered">
+
+                    <div class="sidebar container">
+                        <div class="section box" id="location">
+                            <!-- Added form for location -->
+                            <h2 class="title is-4">What city are you <span class="has-text-primary">visiting</span>?
+                            </h2>
+
+                            <form>
+                                <input class="my-1" type="text" location="location" id="locationInfo"
+                                    placeholder="Where to?" />
+                            </form>
+
+                            <button type="submit" class="button btn is-primary" id="searchBtn">
+                                Search
+                            </button>
+
+                            <div>
+                                <button type="submit" class="button btn is-primary my-2" id="resetButton">Reset Your
+                                    Trip!</button>
+                            </div>
+
+                        </div>
+
+                        <div class="section box" id="currencyex">
+                            <h2 class="title is-4">Currency Exchange <span class="has-text-primary">Rate</span></h2>
+
+                            <div class="wrapper">
+                                <p class="subtitle"><span class="has-text-primary">Find</span> Exchange Rates:</p>
+                                <form action="#">
+                                    <div class="amount">
+                                        <p class="py-1"> Enter Amount:</p>
+                                        <input type="text" value="1">
+                                    </div>
+
+                                    <div class="drop-list py-3 columns level-item">
+                                        <div class="from column is-5">
+                                            <p>From:</p>
+                                            <div class="select-box">
+                                                <select></select>
+                                            </div>
+                                        </div>
+
+                                        <div class="icon column is-2 is-centered level-item">
+                                            <i class="fas fa-exchange-alt"></i>
+                                        </div>
+
+                                        <div class="to column is-5">
+                                            <p>To:</p>
+                                            <div class="select-box">
+                                                <select></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="exchange-rate">Getting Exchange Rate...</div>
+                                    <button class="button is-primary my-2">Convert Currency</button>
                                 </form>
-                                <button type="submit" class="button btn is-primary" id="searchBtn">Search</button>
+                              
                             </div>
+                        </div>
 
-                            <div class="section" id="currencyex">
-                                <h2 class="title is-4">Currency Exchange <span class="has-text-primary">Rate</span></h2>
-                                <div class="wrapper">
-                                    <h2>Currency Converter</h2>
-                                    <p>Find Exchange Rates</p>
-                                    <form action="#">
-                                        <div class="amount">
-                                            <p> Enter Amount:</p>
-                                            <input type="text" value="1">
-                                        </div>
-                                        <div class="drop-list">
-                                            <div class="from">
-                                                <p>From:</p>
-                                                <div class="select-box">
-                                                    <select></select>
-                                                </div>
-                                            </div>
-                                            <div class="icon"><i class="fas fa-exchange-alt"></i></div>
-                                            <div class="to">
-                                                <p>To:</p>
-                                                <div class="select-box">
-                                                    <select></select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="exchange-rate">Getting Exchange Rate...</div>
-                                        <button>Convert Currency</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div><h2 class="title is-4">The Almighty <span class="has-text-primary">Map</span></h2>
-                                <p>Lost? Plot on the map of where your trip will take you here:</p>
-                            </div>
+                        <div class="section box py-6">
+                            <h2 class="title is-4">The Almighty <span class="has-text-primary">Map</span></h2>
+                            <p class="mb-3"><span class="has-text-primary">Lost?</span> Plot on the map of where your
+                                trip will take you here:</p>
 
-                            <div class="section" id="map">
+                            <div class="section box" id="map">
                                 <h2 class="title is-4">The Almighty <span class="has-text-primary">Map</span></h2>
                                 <p>Lost? Plot on the map of where your trip will take you here:</p>
 
@@ -132,6 +154,7 @@
 
                               <!--  <script
                                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+
                                      defer
                                  ></script>
                             -->
@@ -145,6 +168,7 @@
                 </div>
             </div>
     </div>
+
             <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
             <script src="./assets/js/countries.js"></script>
             <script src="./assets/js/script.js"></script>

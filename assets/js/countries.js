@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 var resetBtn = $('#resetButton');
 var textBox = $('textarea');
 resetBtn.on('click', function(){
+    localStorage.clear();
     textBox.val("");
 });
 
