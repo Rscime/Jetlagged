@@ -11,8 +11,8 @@
     <title>jetLagged</title>
 </head>
 
-<body>
-    <header class="section has-text-centered">
+<body class="has-background-grey-lighter">
+    <header class="section has-text-centered box has-background-white-ter py-4">
         <h1 class="title is-1">jet<span class="title is-1 has-text-primary has-text-weight-bold">Lagged</span></h1>
         <p class="subtitle is-5">Ready for an adventure?</p>
         <p id="currentDay" class="lead"></p>
@@ -65,58 +65,66 @@
                 <textarea class="textarea" placeholder="What's the plan?"></textarea>
                 <button class="button btn saveButton is-primary my-1">Save</button>
             </div>
+
         </div>
 
-        <div>
-            <button type="submit" class="button btn is-primary" id="resetButton">Reset Trip!</button>
-        </div>
-    
-        
         <div class="column section container">
-                <div class="sidebar">
+            <div class="sidebar">
 
-                    <div class="column section container has-text-centered">
-                        <div class="sidebar container">
-                            <div class="section" id="location">
-                                <!-- Added form for location -->
-                                <h2 class="title is-4">What city are you <span class="has-text-primary">visiting</span>?
-                                </h2>
-                                <form>
-                                    <input class="my-2" type="text" location="location" id="locationInfo" />
+                <div class="column section container has-text-centered">
+
+                    <div class="sidebar container">
+                        <div class="section box" id="location">
+                            <!-- Added form for location -->
+                            <h2 class="title is-4">What city are you <span class="has-text-primary">visiting</span>?
+                            </h2>
+                            
+                            <form>
+                                <input class="my-1" type="text" location="location" id="locationInfo" placeholder="Where to?" />
+                            </form>
+
+                            <button type="submit" class="button btn is-primary" id="searchBtn">
+                                Search
+                            </button>
+
+                            <div>
+                                <button type="submit" class="button btn is-primary my-2" id="resetButton">Reset Your Trip!</button>
+                            </div>
+
+                        </div>
+
+                        <div class="section box" id="currencyex">
+                            <h2 class="title is-4">Currency Exchange <span class="has-text-primary">Rate</span></h2>
+                           
+                            <div class="wrapper">
+                                <p class="subtitle"><span class="has-text-primary">Find</span> Exchange Rates:</p>
+                                <form action="#">
+                                    <div class="amount">
+                                        <p class="py-1"> Enter Amount:</p>
+                                        <input type="text" value="1">
+                                    </div>
+
+                                    <div class="drop-list py-3 columns">
+                                        <div class="from column is-5">
+                                            <p>From:</p>
+                                            <div class="select-box">
+                                                <select></select>
+                                            </div>
+                                        </div>
+
+                                        <div class="icon column is-2"><i class="fas fa-exchange-alt"></i></div>
+
+                                        <div class="to column is-5">
+                                            <p>To:</p>
+                                            <div class="select-box">
+                                                <select></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exchange-rate">Getting Exchange Rate...</div>
+                                    <button class="button is-primary my-2">Convert Currency</button>
                                 </form>
-                                <button type="submit" class="button btn is-primary" id="searchBtn">Search</button>
-                            </div>
 
-                            <div class="section" id="currencyex">
-                                <h2 class="title is-4">Currency Exchange <span class="has-text-primary">Rate</span></h2>
-                                <div class="wrapper">
-                                    <h2>Currency Converter</h2>
-                                    <p>Find Exchange Rates</p>
-                                    <form action="#">
-                                        <div class="amount">
-                                            <p> Enter Amount:</p>
-                                            <input type="text" value="1">
-                                        </div>
-                                        <div class="drop-list">
-                                            <div class="from">
-                                                <p>From:</p>
-                                                <div class="select-box">
-                                                    <select></select>
-                                                </div>
-                                            </div>
-                                            <div class="icon"><i class="fas fa-exchange-alt"></i></div>
-                                            <div class="to">
-                                                <p>To:</p>
-                                                <div class="select-box">
-                                                    <select></select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="exchange-rate">Getting Exchange Rate...</div>
-                                        <button>Convert Currency</button>
-                                    </form>
-                                </div>
-                            </div>
                             <div><h2 class="title is-4">The Almighty <span class="has-text-primary">Map</span></h2>
                                 <p>Lost? Plot on the map of where your trip will take you here:</p>
                             </div>
@@ -132,16 +140,14 @@
                            <!--    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
                                     ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta"});</script>
                                 --> 
-                            </div>
-
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-            <script src="./assets/js/countries.js"></script>
-            <script src="./assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/countries.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 </body>
 
