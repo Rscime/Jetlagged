@@ -85,7 +85,7 @@ function getExchangeRate(){
     google.maps.event.addListener(map, "click", (event) => {
         addMarker(event.latLng, map);
       });
-      addMarker(bangalore, map);
+      addMarker(Europe, map);
     }
     function addMarker(location, map) {
         new google.maps.Marker({
