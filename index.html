@@ -15,6 +15,7 @@
     <header class="section has-text-centered box has-background-white-ter py-4">
         <h1 class="title is-1">jet<span class="title is-1 has-text-primary has-text-weight-bold">Lagged</span></h1>
         <p class="subtitle is-5">Ready for an adventure?</p>
+        <p><span id="savedLocation"></span></p>
         <p id="currentDay" class="lead"></p>
     </header>
 
@@ -167,7 +168,22 @@
             <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
             <script src="./assets/js/countries.js"></script>
             <script src="./assets/js/script.js"></script>
+            <script>
+                // Event handler for saving location
+                $('#searchBtn').on('click', function(e) {
+                e.preventDefault();
+                let locationText = $('#locationInfo').val();
+                // Stores input location (locationText) under the key 'locationKey'
+                localStorage.setItem('locationKey', locationText);
+                console.log(locationText);
+                });
 
+                // Retrieve the saved location from local storage
+                var savedLocation = localStorage.getItem('locationKey');
+
+                // Update the HTML element with the saved location
+                document.getElementById('savedLocation').textContent = savedLocation;
+            </script>
 </body>
 
 </html>
